@@ -21,6 +21,30 @@ Entwickle eine kleine REST-API für ein Jobportal, in dem Unternehmen Stellenanz
 Verwende bitte (falls möglich) `.rest/.http` um deine Endpunkte zu testen, damit wir beim Kontrollieren deine vorgefertigten Test-Anfragen ebenfalls nutzen können. Dies erleichtert uns die Kontrolle der Aufgaben. Danke!
 
 Hinweis: Wir sehen die Cookies und dadurch auch das JWT nicht! Aber VS- Code speichert das Cookie Temporär. Das bedeutet solange VS-Code offen ist und auch die .rest Datei nicht geschlossen wird, können wir auch geschützte Routen testen, da nach einem Login VS-Code das Cookie automatisch setzt (wie das Frontend normalerweise).
+import express from "express";
+import mongoose from "mongoose";
+import cors from "cors";
+import dotenv from "dotenv";
+dotenv.config();
+console.log("MONGODB_URI:", process.env.MONGODB_URI);
+// Import routes
+const app = express();
+const PORT = 5500;
+app.use(cors());
+app.use(express.json());
+
+// Connect to MongoDB
+mongoose
+  .connect(process.env.MONGODB_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => console.log("MongoDB verbunden"))
+  .catch((err) => console.error("MongoDB-Verbindungsfehler:", err));
+
+app.listen(PORT, () => {
+  console.log(`Server läuft auf http://localhost:${PORT}`);
+});
 
 ### Registrierung
 

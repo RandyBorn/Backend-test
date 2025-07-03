@@ -1,38 +1,29 @@
-## WICHTIGER HINWEIS
-## Beispiel: POST http://localhost:5500... HTTP/1.1 <- Nicht vergessen 😉
-## Nach dem Login speichert VS-Code das Cookie für weitere Anfragen, aber nicht sichtbar
-## neuer Login muss gemacht werden wenn... VS-Code oder .rest Datei geschlossen wurden
-
-
-
 POST http://localhost:5500/api/auth/register HTTP/1.1
 Content-Type: application/json
-
 {
   "name": "TechSpire Inc",
   "email": "hr@techspire.com",
   "password": "Test@1234",
   "role": "company"
 }
-
 ###
 POST http://localhost:5500/api/auth/login HTTP/1.1
 Content-Type: application/json
-
 {
   "email": "hr@techspire.com",
   "password": "Test@1234"
 }
 ###
-
 POST http://localhost:5500/api/jobs HTTP/1.1
 Content-Type: application/json
 Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODY1NGNmNTk3ZGMyZmQxODNhYWM1ZWIiLCJuYW1lIjoiVGVjaFNwaXJlIEluYyIsImVtYWlsIjoiaHJAdGVjaHNwaXJlLmNvbSIsInJvbGUiOiJjb21wYW55IiwiaWF0IjoxNzUxNTM0MTA1LCJleHAiOjE3NTE2MjA1MDV9.s82beL7bF7jS_fkyI5l2RSnxu55EflXONsdkbLWGB1k;
-
 {
   "title": "React Developer"
 }
-
 ### 3. Get Jobs
 GET http://localhost:5500/api/jobs
+
+
+
+
 
