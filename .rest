@@ -1,61 +1,29 @@
-## WICHTIGER HINWEIS
-## Beispiel: POST http://localhost:5500... HTTP/1.1 <- Nicht vergessen 😉
-## Nach dem Login speichert VS-Code das Cookie für weitere Anfragen, aber nicht sichtbar
-## neuer Login muss gemacht werden wenn... VS-Code oder .rest Datei geschlossen wurden
-
-
-## Benutzer registrieren
-
 POST http://localhost:5500/api/auth/register HTTP/1.1
 Content-Type: application/json
-
 {
-  "name": "Anna Musteu",
-  "email": "anna@examplr.com",
-  "password": "sicher123",
+  "name": "TechSpire Inc",
+  "email": "hr@techspire.com",
+  "password": "Test@1234",
   "role": "company"
 }
-
-
-### Benutzer einloggen
+###
 POST http://localhost:5500/api/auth/login HTTP/1.1
 Content-Type: application/json
-
 {
-  "email": "anna@examplr.com",
-  "password": "sicher123"
+  "email": "hr@techspire.com",
+  "password": "Test@1234"
 }
-
-## Neue Jobanzeige erstellen
-
-
+###
 POST http://localhost:5500/api/jobs HTTP/1.1
 Content-Type: application/json
-Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODY2NDlkMmYyZGMxNTc5MWVlYzA4N2QiLCJuYW1lIjoiQW5uYSBNdXN0ZXUiLCJlbWFpbCI6ImFubmFAZXhhbXBsci5jb20iLCJyb2xlIjoiY29tcGFueSIsImlhdCI6MTc1MTUzNDA1NiwiZXhwIjoxNzUxNjIwNDU2fQ.OkEEy4UFALyTv_PqYI5_maG6E-vqY8MGZjgn3RfrzZA
-
+Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODY1NGNmNTk3ZGMyZmQxODNhYWM1ZWIiLCJuYW1lIjoiVGVjaFNwaXJlIEluYyIsImVtYWlsIjoiaHJAdGVjaHNwaXJlLmNvbSIsInJvbGUiOiJjb21wYW55IiwiaWF0IjoxNzUxNTM0MTA1LCJleHAiOjE3NTE2MjA1MDV9.s82beL7bF7jS_fkyI5l2RSnxu55EflXONsdkbLWGB1k;
 {
-  "title": "React Developer",
-   "role": "company"
-  
+  "title": "React Developer"
 }
+### 3. Get Jobs
+GET http://localhost:5500/api/jobs
 
-# ### 1. Register Applicant
-# POST http://localhost:5500/api/auth/register
-# Content-Type: application/json
-# {
-#   "name": "Suaina Appli",
-#   "email": "applicant@suaing.com",
-#   "password": "Test@1234",
-#   "role": "applicant"
-# }
-# ### 2. Login
-# POST http://localhost:5500/api/auth/login
-# Content-Type: application/json
-# {
-#   "email": "applicant@suaing.com",
-#   "password": "Test@1234"
-# }
-# ### 3. Get Jobs
-# GET http://localhost:5500/api/jobs
-# ### 4. Apply to a Job
-# POST http://localhost:5500/api/jobs/apply/
+
+
+
+

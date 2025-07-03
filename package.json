@@ -1,15 +1,23 @@
 {
   "name": "backend-test",
   "version": "1.0.0",
-  "description": "## 🎯 Ziel",
+  "description": "Entwickle eine kleine REST-API für ein Jobportal, in dem Unternehmen Stellenanzeigen veröffentlichen und Bewerber sich registrieren und bewerben können.",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RandyBorn/Backend-test.git"
+  },
   "keywords": [],
-  "author": "Randy",
+  "author": "",
   "license": "ISC",
   "type": "module",
+  "bugs": {
+    "url": "https://github.com/RandyBorn/Backend-test/issues"
+  },
+  "homepage": "https://github.com/RandyBorn/Backend-test#readme",
   "dependencies": {
     "bcryptjs": "^3.0.2",
     "cookie-parser": "^1.4.7",
