@@ -1,22 +1,25 @@
 POST http://localhost:5500/api/auth/register HTTP/1.1
 Content-Type: application/json
+
 {
   "name": "TechSpire Inc",
-  "email": "hr@techspire.com",
+  "email": "hr@techsire.com",
   "password": "Test@1234",
   "role": "company"
 }
 ###
 POST http://localhost:5500/api/auth/login HTTP/1.1
 Content-Type: application/json
+
 {
-  "email": "hr@techspire.com",
+  "email": "hr@techsire.com",
   "password": "Test@1234"
 }
 ###
 POST http://localhost:5500/api/jobs HTTP/1.1
 Content-Type: application/json
-Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODY1NGNmNTk3ZGMyZmQxODNhYWM1ZWIiLCJuYW1lIjoiVGVjaFNwaXJlIEluYyIsImVtYWlsIjoiaHJAdGVjaHNwaXJlLmNvbSIsInJvbGUiOiJjb21wYW55IiwiaWF0IjoxNzUxNTM0MTA1LCJleHAiOjE3NTE2MjA1MDV9.s82beL7bF7jS_fkyI5l2RSnxu55EflXONsdkbLWGB1k;
+Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODY2ODY4NWJkYTQ0NzU1ODllYjM4NjEiLCJuYW1lIjoiVGVjaFNwaXJlIEluYyIsImVtYWlsIjoiaHJAdGVjaHNwaXJlLmNvbSIsInJvbGUiOiJjb21wYW55IiwiaWF0IjoxNzUxNTQ5NTk4LCJleHAiOjE3NTE2MzU5OTh9.WONEzUSrdENicb-MD6S9RL70lIXgj3LbF_U1Nn2_Wmg
+
 {
   "title": "React Developer"
 }
